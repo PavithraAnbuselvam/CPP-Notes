@@ -87,6 +87,7 @@ return 0;
 
 
 ----------------------------------------------------------**Encapsulation**---------------------------------------------------------------------
+
 It is binding data and the functions into a single unit and restrict direct access to the some components.
 Hiding internal and implementation details from outside and exposing only what is necessary through a public interface.
 
