@@ -49,6 +49,21 @@ int main()
   delete a;
 }
 
+**Error Eg**
+
+class base{
+Public:
+virtual void fun1()=0;
+};
+class Derived : public base{
+public:
+//some other functions
+};
+int main(){
+**Base b;**// gives error
+return 0;
+}
+
 
 
 
