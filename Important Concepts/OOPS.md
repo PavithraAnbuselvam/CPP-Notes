@@ -60,7 +60,7 @@ public:
 //some other functions
 };
 int main(){
-**Base b;**// gives error
+Base b;// gives error
 return 0;
 }
 
