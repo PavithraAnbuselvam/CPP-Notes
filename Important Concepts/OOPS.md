@@ -11,7 +11,7 @@ A Class is a blueprint that defines the structure and behaviour of objects.
 It is a building block of object oriented program.
 It is a user-defined data type that contains data members and member functions that operate on the data members.
 
-**Abstraction**
+-------------------------------------------------------**Abstraction**--------------------------------------------------------------------------
 Abstraction means hiding internal implementation details and showing only the essential features.
 
 **Abstract class** 
@@ -66,7 +66,7 @@ return 0;
 
 
 
----------------------------------------------------**Encapsulation**----------------------------------------------------------------------------
+----------------------------------------------------------**Encapsulation**---------------------------------------------------------------------
 
 
 
