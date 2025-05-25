@@ -282,6 +282,30 @@ d3.display();
 return 0;
 }
 
+**Runtime Polymorphism**
+It is achieved through inheritance and virtual functions.
+Calling derived class functions using base class pointer or reference.
+
+**Example**
+class Base{
+public:
+virtual void show(){
+cout<<"Base class";
+}
+};
+class Derived : public Base{
+void show() override{
+cout<<"Derived class";
+}
+};
+
+int main(){
+Base* bptr;
+Derived d;
+bptr=&d;
+bptr->show();
+return 0;
+}
 
 
 
