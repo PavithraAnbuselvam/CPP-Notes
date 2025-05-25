@@ -34,21 +34,37 @@ class Animal
 {
 
 public:
+
   virtual void sound()=0;
+  
 };
+
 class Dog:public Animal
+
 {
+
 public:
+ 
   void sound() override
+  
   {
+  
   cout<<"Dog barks";
+  
   }
+
 };
+
 int main()
+
 {
+
   Animal* a=new Dog();
+  
   a->sound();
+  
   delete a;
+
 }
 
 **Error Eg**
