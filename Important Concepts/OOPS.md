@@ -1,4 +1,4 @@
-**Object Oriented Programming **
+**Object Oriented Programming**
 
 It is the programming paradigm which implements the concept of Object in the program.
 An object is a collection of data and the methods which operates on that data.
@@ -63,7 +63,7 @@ int main(){
 Base b;// gives error
 return 0;
 }
-
+---------------------------------------------------**Encapsulation**----------------------------------------------------------------------------
 
 
 
