@@ -86,7 +86,7 @@ return 0;
 }
 
 
-----------------------------------------------------------**Encapsulation**---------------------------------------------------------------------
+----------------------------------------------------------**Encapsulation**--------------------------------------------------------------------
 
 It is binding data and the functions into a single unit and restrict direct access to the some components.
 Hiding internal and implementation details from outside and exposing only what is necessary through a public interface.
@@ -125,4 +125,13 @@ cout<<acc.getbalance();
 
 return 0;
 }
+
+
+---------------------------------------------------------**Inheritance**-----------------------------------------------------------------------
+
+It is fundamental concept in object-oriented programming that allows a **class to inherit attributes and methods from another class**.
+This promotes code reusability, establishes a hierarchical relationship between classes, and supports the principles of polymorphism.
+
+
+
 
