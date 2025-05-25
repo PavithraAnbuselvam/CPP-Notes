@@ -91,5 +91,39 @@ return 0;
 It is binding data and the functions into a single unit and restrict direct access to the some components.
 Hiding internal and implementation details from outside and exposing only what is necessary through a public interface.
 
+**Example**
 
+class Account{
 
+private:
+
+int balance;
+
+public:
+
+void getBalance(){
+
+return balance;
+
+}
+
+void setbalance(int b){
+
+balance=b;
+
+}};
+
+int main(){
+
+Account acc;
+
+acc.setBalance(1000);
+
+cout<<acc.getbalance();
+
+//acc.balance=-500;    //you can't do this
+
+return 0;
+}
+
+//acc.balance(
