@@ -135,7 +135,6 @@ This promotes code reusability, establishes a hierarchical relationship between 
 **Constructor and Destructor**
 Constructors and destructors are not inherited, but they can be called explicitly in the derived class constructor and destructor.
 
-#include <iostream>
 
 class Base {
 
