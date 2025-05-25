@@ -30,7 +30,9 @@ When you are not giving the body of the function in the base class,it becomes **
 **E.g**
 
 class Animal
+
 {
+
 public:
   virtual void sound()=0;
 };
@@ -65,9 +67,9 @@ return 0;
 }
 
 
-
 ----------------------------------------------------------**Encapsulation**---------------------------------------------------------------------
-
+It is binding data and the functions into a single unit and restrict direct access to the some components.
+Hiding internal and implementation details from outside and exposing only what is necessary through a public interface.
 
 
 
