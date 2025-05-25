@@ -29,9 +29,7 @@ When you are not giving the body of the function in the base class,it becomes **
 
 **E.g**
 
-class Animal
-
-{
+class Animal{
 
 public:
 
@@ -39,15 +37,11 @@ public:
   
 };
 
-class Dog:public Animal
-
-{
+class Dog:public Animal{
 
 public:
  
-  void sound() override
-  
-  {
+  void sound() override  {
   
   cout<<"Dog barks";
   
@@ -55,9 +49,7 @@ public:
 
 };
 
-int main()
-
-{
+int main(){
 
   Animal* a=new Dog();
   
@@ -70,16 +62,27 @@ int main()
 **Error Eg**
 
 class base{
-Public:
-virtual void fun1()=0;
-};
-class Derived : public base{
+
 public:
-//some other functions
+
+virtual void fun1()=0;
+
 };
+
+class Derived : public base{
+
+public:
+
+//some other functions
+
+};
+
 int main(){
+
 Base b;// gives error
+
 return 0;
+
 }
 
 
