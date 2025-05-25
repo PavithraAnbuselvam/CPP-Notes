@@ -132,6 +132,34 @@ return 0;
 It is fundamental concept in object-oriented programming that allows a **class to inherit attributes and methods from another class**.
 This promotes code reusability, establishes a hierarchical relationship between classes, and supports the principles of polymorphism.
 
+**Constructor and Destructor**
+Constructors and destructors are not inherited, but they can be called explicitly in the derived class constructor and destructor.
 
+#include <iostream>
+
+class Base {
+public:
+    Base() {
+        std::cout << "Base Constructor" << std::endl;
+    }
+    ~Base() {
+        std::cout << "Base Destructor" << std::endl;
+    }
+};
+
+class Derived : public Base {
+public:
+    Derived() {
+        std::cout << "Derived Constructor" << std::endl;
+    }
+    ~Derived() {
+        std::cout << "Derived Destructor" << std::endl;
+    }
+};
+
+int main() {
+    Derived d;
+    return 0;
+}
 
 
