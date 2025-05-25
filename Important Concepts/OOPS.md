@@ -202,4 +202,11 @@ When a derived class object is destroyed, the derived class destructor is called
 
 **Hybrid Inheritance** A combination of two or more types of inheritance.
 
-----------------------------------------------------------**Polymorphism**-------------------------------------------------------------------------
+----------------------------------------------------------**Polymorphism**---------------------------------------------------------------------
+It allows the same function or operator to be used in different ways.
+
+**Compiletime Polymorphism**
+This is typically achieved through function overloading and operator overloading.
+
+**Function Overloading**
+Function overloading occurs when multiple functions have the same name but different parameters.
