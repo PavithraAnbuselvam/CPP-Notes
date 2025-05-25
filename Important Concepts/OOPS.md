@@ -246,3 +246,42 @@ int main() {
 
 }
 
+**Operator Overloading**
+
+C++ allows you to redefine how operators work for user-defined types.
+
+**Example**
+
+class Distance{
+
+public:
+
+int meters;
+
+Distance(int m): meters(m){}
+
+Distance operator+(const Distance &obj){
+
+return Distance(meters+obj.meters);
+}
+
+void display(){
+
+cout<<meters;
+
+}
+
+int main(){
+
+Distance d1(5),d2(10);
+
+Distance d3=d1+d2;
+
+d3.display();
+
+return 0;
+}
+
+
+
+
