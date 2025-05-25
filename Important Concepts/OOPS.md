@@ -16,3 +16,28 @@ Abstraction means hiding internal implementation details and showing only the es
 
 **Abstract class** It contains at least one pure virtual function.It is a class that cannot be instantiated by its own.It is designed to be inherited by other classes.
 
+**E.g**
+
+class Animal
+{
+public:
+  virtual void sound()=0;
+};
+class Dog:public Animal
+{
+public:
+  void sound() override
+  {
+  cout<<"Dog barks";
+  }
+};
+int main()
+{
+  Animal* a=new Dog();
+  a->sound();
+  delete a;
+}
+
+
+
+
