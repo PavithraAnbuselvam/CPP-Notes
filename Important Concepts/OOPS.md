@@ -14,13 +14,19 @@ It is a user-defined data type that contains data members and member functions t
 **Abstraction**
 Abstraction means hiding internal implementation details and showing only the essential features.
 
-**Abstract class** It contains at least one **pure virtual function**.It is a class that cannot be instantiated by its own.It is designed to be inherited by other classes.
+**Abstract class** 
+It contains at least one **pure virtual function**.
+It is a class that cannot be instantiated by its own.
+It is designed to be inherited by other classes.
+Abstract classes can have constructors, and they are called when an object of a derived class is created.
+
 **Pure Virtual Function**
 Pure Virtual Function is a virtual function which doesn't have body.
 
 **Syntax** virtual void fun()=0;
 
 When you are not giving the body of the function in the base class,it becomes **abstract class**.
+
 **E.g**
 
 class Animal
