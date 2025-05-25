@@ -185,5 +185,21 @@ Derived destructor
 
 Base destructor
 
-![Image](https://github.com/user-attachments/assets/8c674043-bfdb-45f3-858a-13b1572c82ab)
+
+When a derived class object is created, the base class constructor is called first,followed by the derived class constructor.
+
+When a derived class object is destroyed, the derived class destructor is called first, followed by the base class destructor.
+
+**Inheritance types**
+
+**Single Inheritance** A derived class inherits from one base class.
+
+**Multiple Inheritance** A derived class inherits from more than one base class.
+
+**Multiple Inheritance** A derived class inherits from another derived class, creating a chain.
+
+**Hierarchical Inheritance** Multiple derived classes inherit from the same base class.
+
+**Hybrid Inheritance** A combination of two or more types of inheritance.
+
 
