@@ -174,7 +174,14 @@ int main() {
     Derived d;
     
     return 0;
-}
+} 
+
+**Output**
+
+Base constructor
+Derived constructor
+Derived destructor
+Base destructor
 
 ![Image](https://github.com/user-attachments/assets/8c674043-bfdb-45f3-858a-13b1572c82ab)
 
