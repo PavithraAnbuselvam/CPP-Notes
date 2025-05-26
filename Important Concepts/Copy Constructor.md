@@ -194,57 +194,62 @@ numA: 20
 
 numB: 20
 
-here default copy constructor is used and output looks like everything fine but not.
+> here default copy constructor is used and output looks like everything fine but not.
 
-it does shallow copy. it is copying the numA int * value to numB int * so, both has same address which means both are pointing same value in heap.
+> it does shallow copy. it is copying the numA int * value to numB int * so, both has same address which means both are pointing same value in heap.
 
-once we change of numA value in heap its changed in numB also.
+> once we change of numA value in heap its changed in numB also.
 
-Deep Copy
-here we are overriding the default copy constructor and deep copying the given object member value to this object member.
-now both objects are pointing different int *. so, changes in one object will not affect another object. this is deep copy.
-in another words deep copy means not only copying stack values we are creating the heap values also.
+**Deep Copy**
+
+> here we are overriding the default copy constructor and deep copying the given object member value to this object member.
+now both objects are pointing different int *.
+
+> so, changes in one object will not affect another object. this is deep copy.
+
+>in another words deep copy means not only copying stack values we are creating the heap values also.
+
 #include <iostream>
 
 using namespace std;
 
-class Number
-{
-public:
-  // pointer variable
-  int *n;
+    class Number
+    {
+    public:
+    // pointer variable
+    int *n;
 
-  // normal constructor to allocate memory dynamically
-  Number(int num)
-  {
+    // normal constructor to allocate memory dynamically
+    Number(int num)
+    {
     n = (int *) malloc(sizeof(int));
     *n = num; 
-  } 
+    } 
 
-  // copy constructor for deep copy
-  Number(const Number& anotherNum)
-  {
+    // copy constructor for deep copy
+    Number(const Number& anotherNum)
+    {
     // allocates new memory for new object memner
      n = (int *) malloc(sizeof(int));
     // deep copy the value
     *n = *(anotherNum.n);
-  }
+    }
   
-  // destructor for deallocate memory
-  ~Number
-  {
+    // destructor for deallocate memory
+    ~Number
+    {
     free(n);
-  }   
+    }   
 
-  int get()
-  {
-    return *n;
-  }
+    int get()
+    {
+     return *n;
+    }
 
-}
+    }
 
-int main()
-{
+    int main()
+    {
     // create object
     Number numA(7);
 
@@ -263,11 +268,16 @@ int main()
     cout<<"numB: "<< numB.get() <<endl;
     
     return 0;
-}
-output
+    }
+    
+**output**
+
 numA: 7
+
 numB: 7
+
 numA: 20
+
 numB: 7
 
 Copy Constructor Parameter Breakdown
