@@ -42,3 +42,7 @@
 
     return 0;
     }
+
+**Output**:
+num1: 7
+num2: 7
