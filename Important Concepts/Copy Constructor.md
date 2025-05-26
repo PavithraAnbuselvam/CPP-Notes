@@ -51,14 +51,14 @@ num2: 7
 
 we can override the copy constructor function with our own implementations.
 
-class BasicNumber
-{
-public:
+  class BasicNumber
+  {
+  public:
   int n;
 
   BasicNumber(int set_n)
   {
-    n = set_n; 
+  n = set_n; 
   }    
 
   // override default copy constructor
@@ -68,10 +68,10 @@ public:
     n = 2 * basicNum.n; 
   }  
 
-}
+  }
 
-int main()
-{
+    int main()
+    {
     BasicNumber num1(7);
 
     cout<<"num1: "<< num1.n <<endl;
@@ -81,7 +81,7 @@ int main()
     cout<<"num2: "<< num2.n <<endl;
 
     return 0;
-} 
+    } 
 
 **Output:**
 
