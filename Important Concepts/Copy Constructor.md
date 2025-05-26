@@ -7,7 +7,7 @@
 >so, if dynamically allocated data exists we have to do deep copy of the object.
 
 
-
+    #include <iostream>
     class BasicNumber{
 
     public:
