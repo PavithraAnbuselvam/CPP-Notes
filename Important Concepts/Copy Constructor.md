@@ -49,6 +49,30 @@ num1: 7
 
 num2: 7
 
+**When is the copy constructor called?**
+
+1) When initializing a new object with an existing object.
+
+   Person p1("Alice");
+
+   Person p2=p1; //copy constructor is called
+   
+3) When passing an object by value to a function.
+
+   void funct(Person p){}
+
+   func(p1); //copy constructor is called
+   
+5) When returning an object by value from a function.
+
+    Person createPerson(){
+
+   Person p("Bob");
+   return p; //copy constructor is called
+
+   }
+   
+
 we can override the copy constructor function with our own implementations.
 
     class BasicNumber
