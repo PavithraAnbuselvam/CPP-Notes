@@ -8,21 +8,21 @@
 
 
 
-class BasicNumber{
+    class BasicNumber{
 
-public:
+    public:
 
-  int n;
+    int n;
 
-  BasicNumber(int set_n){
+    BasicNumber(int set_n){
 
     n = set_n; 
   
-  }    
+    }    
 
-}
+    }
 
-int main(){
+    int main(){
 
     BasicNumber num1(7);
 
@@ -38,4 +38,4 @@ int main(){
     cout<<"num2: "<< num2.n <<endl;
 
     return 0;
-}
+    }
