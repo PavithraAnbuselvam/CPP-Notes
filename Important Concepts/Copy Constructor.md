@@ -48,3 +48,43 @@
 num1: 7
 
 num2: 7
+
+we can override the copy constructor function with our own implementations.
+
+class BasicNumber
+{
+public:
+  int n;
+
+  BasicNumber(int set_n)
+  {
+    n = set_n; 
+  }    
+
+  // override default copy constructor
+  BasicNumber(const BasicNumber& basicNum)
+  {
+    // own implementation
+    n = 2 * basicNum.n; 
+  }  
+
+}
+
+int main()
+{
+    BasicNumber num1(7);
+
+    cout<<"num1: "<< num1.n <<endl;
+
+    BasicNumber num2 = num1;
+    
+    cout<<"num2: "<< num2.n <<endl;
+
+    return 0;
+} 
+
+**Output:**
+
+num1: 7
+
+num2: 14
