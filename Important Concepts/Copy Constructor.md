@@ -209,9 +209,9 @@ now both objects are pointing different int *.
 
 >in another words deep copy means not only copying stack values we are creating the heap values also.
 
-#include <iostream>
+    #include <iostream>
 
-using namespace std;
+    using namespace std;
 
     class Number
     {
@@ -280,10 +280,15 @@ numA: 20
 
 numB: 7
 
-Copy Constructor Parameter Breakdown
-Number(const Number& anotherNum)
+**Copy Constructor Parameter Breakdown**
+
+  Number(const Number& anotherNum)
   {
-   // content for deep copy
+  // content for deep copy
   }
-here we have to use const keyword to restrict changes in given object
-we can't pass (Number anotherNum) by value because, if pass parameter by value it will take one more copy and for that copy you need copy constructor but already you are trying to create copy constructor.this will cause circular dependency. so, we have to pass by reference that is the reason for Number& anotherNum.
+  
+> here we have to use const keyword to restrict changes in given object
+
+> we can't pass (Number anotherNum) by value because, if pass parameter by value it will take one more copy and for that copy you need copy constructor but already you are trying to create copy constructor.
+
+> this will cause circular dependency. so, we have to pass by reference that is the reason for Number& anotherNum.
