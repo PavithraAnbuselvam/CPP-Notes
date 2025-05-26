@@ -94,48 +94,51 @@ num2: 14
 
 > copy constructor is not same as copy assignment operation.
 
-class BasicNumber
-{
-public:
-int n;
-
-BasicNumber(int set_n)
-{
-n = set_n; 
-}    
-
-BasicNumber(const BasicNumber& basicNum)
-{
-n = 2 * basicNum.n; 
-cout<<"copy constructor called: "<< n <<endl;
-}  
-
-}
-
-int main()
-{
-BasicNumber num1(7);
-
-cout<<"num1: "<< num1.n <<endl;
+    class BasicNumber
+    {
+    public:
+    int n;
     
-// copy constructor
-BasicNumber num2 = num1;
+    BasicNumber(int set_n)
+    {
+    n = set_n; 
+    }    
     
-cout<<"num2: "<< num2.n <<endl;
+    BasicNumber(const BasicNumber& basicNum)
+    {
+    n = 2 * basicNum.n; 
+    cout<<"copy constructor called: "<< n <<endl;
+    }  
+    
+    }
 
-BasicNumber num3(10);
-BasicNumber num4(15);
+    int main()
+    {
+    BasicNumber num1(7);
 
-//  assignment operator (not copy constructor)
-num3 = num4;
+    cout<<"num1: "<< num1.n <<endl;
+    
+    // copy constructor
+    BasicNumber num2 = num1;
+    
+    cout<<"num2: "<< num2.n <<endl;
 
-return 0;
-}
+    BasicNumber num3(10);
+    BasicNumber num4(15);
 
-output
-num1: 7
-copy constructor called: 14
-num2: 14
+    //  assignment operator (not copy constructor)
+    num3 = num4;
+
+    return 0;
+    }
+
+**output**
+
+    num1: 7
+    
+    copy constructor called: 14
+    
+    num2: 14
 
 > in above code copy construtor called only first time.
 
@@ -143,64 +146,54 @@ num2: 14
 
 **Shallow Copy**
 
-  class Number
-  {
-  public:
-  // pointer variable
-  int *n;
+    class BasicNumber
+    {
+    public:
+    int n;
 
-  // constructor which dynamically allocates memory
-  Number(int set_n)
-  {
-  n = (int *) malloc(sizeof(int));
-  *n = set_n; 
-  } 
-  
-  // destructor to free memory
-  ~Number
-  {
-  free(n);
-  }   
+    BasicNumber(int set_n)
+    {
+    n = set_n; 
+    }    
 
-  // get dereferenced n value
-  int get()
-  {
-  return *n;
-  }
+    BasicNumber(const BasicNumber& basicNum)
+    {
+    n = 2 * basicNum.n; 
+    cout<<"copy constructor called: "<< n <<endl;
+    }  
 
-  }
+    }
 
-  int main()
-  {
-  Number numA(7);
+    int main()
+    {
+    BasicNumber num1(7);
 
-  cout<<"numA: "<< numA.get() <<endl;
+    cout<<"num1: "<< num1.n <<endl;
     
-  // copy constructor
-  Number numB = numA;
+    // copy constructor
+    BasicNumber num2 = num1;
     
-  cout<<"numB: "<< numB.get() <<endl;
+    cout<<"num2: "<< num2.n <<endl;
 
-  // change value of numA n 
-  *(numA.n)=20;
+    BasicNumber num3(10);
+    BasicNumber num4(15);
 
-  cout<<"numA: "<< numA.get() <<endl;
-  cout<<"numB: "<< numB.get() <<endl;
+    //  assignment operator (not copy constructor)
+    num3 = num4;
+
+    return 0;
+    }
     
-  // exit before crashing to see output
-  exit(0);
+**output**
 
-  /**
-  when main reaches return both objects destructor will be called.but both are pointing same memory in heap. so, its try to 
-  double free then code crashed.
-  */
-  return 0;
-  }
-output
 numA: 7
+
 numB: 7
+
 numA: 20
+
 numB: 20
+
 here default copy constructor is used and output looks like everything fine but not.
 
 it does shallow copy. it is copying the numA int * value to numB int * so, both has same address which means both are pointing same value in heap.
