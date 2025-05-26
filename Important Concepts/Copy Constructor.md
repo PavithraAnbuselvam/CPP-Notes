@@ -1,3 +1,5 @@
+**Copy Constructor**
+
 > It is a special object used to create a new object as a copy of an existing object.
 
 >It takes a reference to an object of the same class and copies its values into the new object.
