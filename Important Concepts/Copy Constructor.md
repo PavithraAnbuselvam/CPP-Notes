@@ -282,9 +282,9 @@ numB: 7
 
 **Copy Constructor Parameter Breakdown**
 
-  Number(const Number& anotherNum)
+ Number(const Number& anotherNum)
   {
-  // content for deep copy
+   // content for deep copy
   }
   
 > here we have to use const keyword to restrict changes in given object
