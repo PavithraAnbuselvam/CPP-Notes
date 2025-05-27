@@ -48,6 +48,61 @@ return 0;
 
 }
 
+# 2.std::shared_ptr
+
+A std::shared_ptr is a smart pointer that retains shared ownership of a dynamically allocated object through a pointer. Several shared_ptr objects may own the same object.
+
+**Reference Counting:** It uses reference counting to keep track of how many shared_ptr objects are pointing to the managed object.
+
+The object is destroyed when the last shared_ptr pointing to it is destroyed or reset.
+
+**Copy Semantics:** shared_ptr can be copied, and each copy increases the reference count.
+
+**Use Case:** Suitable for scenarios where multiple parts of a program need to share a ownership of a resource.
+
+#include <iostream>
+#include <memory>
+
+class Resource{
+public:
+
+Resource(){std::cout<<"Resource acquired\n";}
+
+~Resource(){std::cout<<"Resource destroyed\n"};
+
+};
+
+void useResource(const std::shared_ptr<Resource>& res){
+
+std::cout<<"Using resource\n";
+
+}
+
+int main(){
+
+std::shared_ptr<Resource> ptr1(new Resource());
+
+{
+
+std::shared_ptr<Resource> ptr2=ptr1;//Reference count is now 2 
+
+useResource(ptr2);//Reference count is still 2
+
+//ptr2 goes out of scope, reference count is now 1
+
+}
+//ptr1 goes out of scope, reference count is now 0, and the resource is destroyed
+
+return 0;
+
+}
+
+
+
+
+
+
+
 
 
 
