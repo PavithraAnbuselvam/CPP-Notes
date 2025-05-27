@@ -1,3 +1,10 @@
+# raw pointers con's
+**.** raw pointers allow sharing but, it is allow room for errors (forgetting to deallocate)
+
+**.** ownership of pointers (deallocate pointer from some where and using it from other place without knowing)
+
+**.** smart pointers are addressing these issues
+
 # Smart Pointers
 
 It is used for managing dynamic memory automatically,helping to prevent memory leaks and dangling pointers.
@@ -14,7 +21,7 @@ Here are the main types of smart pointers available in c++.
 
 # 1.std::unique_ptr
 
-A unique_ptr is a smart pointer that owns and manages another object through a pointer and disposes of that object when the unique_ptr goes out of scope.
+A unique_ptr is a smart pointer **that owns and manages another object through a pointer** and disposes of that object when the unique_ptr goes out of scope.
 
 **Ownership:** It holds exclusive ownership of dynamically allocated object. Only one unique_ptr can own an object at a time.
 
@@ -50,7 +57,7 @@ return 0;
 
 # 2.std::shared_ptr
 
-A std::shared_ptr is a smart pointer that retains shared ownership of a dynamically allocated object through a pointer. Several shared_ptr objects may own the same object.
+A std::shared_ptr is a smart pointer that retains **shared ownership of a dynamically allocated object through a pointer**. Several shared_ptr objects may own the same object.
 
 **Reference Counting:** It uses reference counting to keep track of how many shared_ptr objects are pointing to the managed object.
 
@@ -96,6 +103,15 @@ useResource(ptr2);//Reference count is still 2
 return 0;
 
 }
+
+
+# 3.std::weak_ptr
+
+A std::weak_ptr is a smart pointer that **holds a non-owning reference to an object** that is mentioned by **std::shared_ptr**.
+
+**No Ownership:** It does not affect the reference count of **the managed object**. The object can be destroyed even if there are weak_ptr instances pointing to it.
+
+**Use Case:** Useful for breaking **circular references** between **shared_ptr instances** or for **observing an object without affecting its lifetime.**
 
 
 
