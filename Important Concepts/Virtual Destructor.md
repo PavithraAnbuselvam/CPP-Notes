@@ -154,5 +154,51 @@ delete bptr;
 
 }
 
+**output:**
+
+B Constructor
+
+B Destructor
+
+
+B Constructor
+
+D Constructor
+
+D Destructor
+
+B Destructor
+
+
+B Constructor
+
+D Constructor
+
+D Destructor
+
+B Destructor 
+
+# Notes:
+
+**Derived * derived = new Base(); // invalid conversion from base to derived**
+
+**E.g:**
+
+main(){
+
+**Derived * derived= static_cast<Derived*> (new Base());**
+
+derived.start1(); //base member function
+
+derived.start2(); //Derived member function
+
+delete derived;
+
+}
+
+
+
+
+
 
 
