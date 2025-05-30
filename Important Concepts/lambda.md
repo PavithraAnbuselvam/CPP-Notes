@@ -4,22 +4,42 @@
 
 2. Created without a function name.
 
+**Syntax:**
+
+[Capture](Parameters)->return_type{
+
+//body
+
+}
+
+**Capture:** Specifies how variables are captured.There are 3 types of capture.
+
+   **1.*[=] (default) :** capture all variables by value.
+   
+   **2.& :** capture all variables by reference.
+   
+   **3.this :** capture current obj (*this) by reference.
+
+**Parameters:** parameter list
+
+**return_type:** specifies return type of lambda function.if omitted return type is deduced automatically.
+
 # 1. passing parameters
 
 1. here this lambda expression accepts one integer parameter (int a). that we are passing after its definition value = 5
 
    
-    [](int a)
+    **[](int a)**
    
-      { cout << a << endl; }(5);
+      **{ cout << a << endl; }(5);**
    
 2. u can pass reference of another variable as a parameter (int &a). here we are passing reference of b and changing its value inside of lambda function.
    
-    int b = 10;
+    **int b = 10;**
     
-    [](int &a)
+    **[](int &a)**
    
-      { a = 15; }(b);
+      **{ a = 15; }(b);**
    
 # 2. using outside variable inside lambda
 
@@ -29,20 +49,20 @@ if u want to use variables which is initialized outside of lambda function u hav
 
 2. if it has [=] outside variables passed inside lambda function as a values (passed by values)
 
-   int b = 10;
+   **int b = 10;**
 
    // we can use b inside lambda but can't change it.
    
-   [=](int a)
+   **[=](int a)**
    
-      { cout << b + a << endl; }(5);
+      **{ cout << b + a << endl; }(5);**
    
 4. if it has [&] outside variables passed inside lambda function as a reference (passed by reference)
    
-   int b = 10;
+   **int b = 10;**
 
    // we can change b inside lambda.
    
-   [&](int a)
+   **[&](int a)**
    
-      { b = a; }(5);
+      **{ b = a; }(5);**
