@@ -196,7 +196,7 @@ When a derived class object is destroyed, the derived class destructor is called
 
 **Multiple Inheritance** A derived class inherits from more than one base class.
 
-**Multiple Inheritance** A derived class inherits from another derived class, creating a chain.
+**Multilevel Inheritance** A derived class inherits from another derived class, creating a chain.
 
 **Hierarchical Inheritance** Multiple derived classes inherit from the same base class.
 
